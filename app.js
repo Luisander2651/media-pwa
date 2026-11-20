@@ -137,7 +137,7 @@ btnTorch.addEventListener('click', async () => {
     const torch = !(cts.advanced && cts.advanced[0]?.torch);
     await track.applyConstraints({ advanced: [{ torch }] });
   } catch (err) {
-    alert('La linterna no es compatible en este dispositivo/navegador.');
+    alert('La linterna no es compatible en este dispositivo/navegador:', err.message);
   }
 });
 
